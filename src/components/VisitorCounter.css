@@ -1,0 +1,97 @@
+.visitor-counter {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  z-index: 9998;
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(20px);
+  padding: 14px 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 215, 0, 0.12);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transform: translateX(120%);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.visitor-counter.visible {
+  transform: translateX(0);
+}
+
+.visitor-icon {
+  font-size: 28px;
+  animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  75% { transform: rotate(-15deg); }
+}
+
+.visitor-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.visitor-number {
+  font-size: 22px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffd700, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+.visitor-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.visitor-dot {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 4px;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.8); }
+}
+
+.pulse-text {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .visitor-counter {
+    bottom: 80px;
+    right: 20px;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+
+  .visitor-icon {
+    font-size: 22px;
+  }
+
+  .visitor-number {
+    font-size: 18px;
+  }
+}

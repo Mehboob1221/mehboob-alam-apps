@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* ===== THEME VARIABLES ===== */
+:root {
+  --theme-primary: #ffd700;
+  --theme-secondary: #f59e0b;
+  --theme-color: #ffd700;
+  --theme-gradient: linear-gradient(135deg, #ffd700, #f59e0b, #d97706);
+  --theme-shadow: rgba(255, 215, 0, 0.3);
+  --theme-glow: rgba(255, 215, 0, 0.15);
+}
+
+/* ===== PREMIUM FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0a0a0f;
+  color: #ffffff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== PREMIUM SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--theme-gradient);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-gradient);
+}
+
+/* ===== DARK MODE ===== */
+body.dark {
+  background: #0a0a0f;
+  color: #ffffff;
+}
+
+body.dark .featured,
+body.dark .about,
+body.dark .contact,
+body.dark .stats {
+  background: #0f1117;
+}
+
+body.dark .card,
+body.dark .stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark p {
+  color: #a0aec0;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4 {
+  color: #ffffff;
+}
+
+/* ===== ANIMATED GRADIENT BACKGROUND ===== */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(circle at 20% 50%, var(--theme-glow) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, var(--theme-glow) 0%, transparent 50%),
+              #0a0a0f;
+}
