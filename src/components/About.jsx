@@ -19,7 +19,7 @@ function About() {
         <h2>
           About <span>Me</span>
         </h2>
-        <h3>Mehboob Alam</h3>
+        <h3>Royal Apps</h3>
         <h4>✦ Desktop Application Developer</h4>
         <p>
           I'm passionate about building modern Windows desktop

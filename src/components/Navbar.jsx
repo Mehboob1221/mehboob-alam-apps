@@ -42,7 +42,7 @@ function Navbar() {
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="logo" onClick={() => scrollToSection('home')}>
-        Mehboob Alam
+        Mehboob Alam apps
       </div>
 
       <nav className={menuOpen ? "nav-links active" : "nav-links"}>
