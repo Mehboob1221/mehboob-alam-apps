@@ -12,7 +12,7 @@ function About() {
       transition={{ duration: 0.8 }}
     >
       <div className="about-image">
-        <img src="/profile.jpg" alt="Mehboob Alam" style={{ width: '250px', height: '250px', borderRadius: '50%', border: '4px solid #ffc107', display: 'block', margin: '0 auto' }} />
+        <img src="/profile.jpg" alt="Mehboob Alam" className="profile-image" style={{ width: '100%', maxWidth: '300px', borderRadius: '50%' }} />
       </div>
 
       <div className="about-text">
